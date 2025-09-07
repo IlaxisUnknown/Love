@@ -45,7 +45,13 @@ body {
   opacity: 0;
 pointer-events: auto;    /* ✅ permite scroll */
   overflow-y: auto;        /* ✅ scroll vertical */
-  max-height: 65vh;        /* ✅ límite en altura */}
+  max-height: 65vh;        /* ✅ límite en altura */
+.dedication-text {
+  background: rgba(255,255,255,0.92);
+  border-radius: 0.7em;
+  padding: 0.7em;
+}
+}
 
 .signature {
   position: static;
