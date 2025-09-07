@@ -43,8 +43,9 @@ body {
   white-space: pre-line;
   z-index: 3;
   opacity: 0;
-  pointer-events: none;
-}
+pointer-events: auto;    /* ✅ permite scroll */
+  overflow-y: auto;        /* ✅ scroll vertical */
+  max-height: 65vh;        /* ✅ límite en altura */}
 
 .signature {
   position: static;

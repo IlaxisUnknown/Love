@@ -70,7 +70,18 @@ function getURLParam(name) {
 function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
-    text = `Para el amor de mi vida:\n\nDesde el primer momento supe que eras tú. Tu sonrisa, tu voz, tu forma de ser… todo en ti me hace sentir en casa.\n\nGracias por acompañarme en cada paso, por entenderme incluso en silencio, y por llenar mis días de amor.\n\nTe amo más de lo que las palabras pueden expresar.`;  } else {
+text = `Buenas noches señorita, espero que se encuentre muy bien, ya es algo tarde, son las 12 de la noche de un día muy especial, no sé si lo recuerda, espero sinceramente que si lo hagas, pero en caso de que no, hoy es un día muy especial, el día de hoy, 7 de septiembre de 2025, usted, amada mía, y mi persona, el día de hoy cumplimos un mes más de ser una pareja. Hoy es un día especial para mi, tengo el privilegio de poder celebrar un mes más al lado de la persona que más amo, de la señorita que ha significado un antes y un después en mi vida, y que actualmente tengo la dicha de poder decir que es mi pareja, mi novia, mi todo, mi media naranja, mi anhelo y mi mayor alegría.\n\n
+
+Espero sinceramente que nos podamos ver el día de hoy, no sé si lo tiene en cuenta o si es consiente, pero desde su partida hace ya unos cuantos años (unas 3 semanas) mi alma y mi cuerpo ruegan por su presencia, a pesar de mis intentos por verla, no se ha podido, y eso solo ha aumentado mis ganas de poder tener en mis brazos a la que es el amor de mi vida, mi mujer y la persona con la que quiero casarme, tener mi familia y poder disfrutar el paso de los años, tener momentos incomodos, alegre, sobrellevar situaciones complicadas, criar nuestras pequeñitas copias de ti, la personita por la que estoy dispuesto a todo y todos, mi orgullo y sencillamente la encarnación de todo aquello bueno que me pudiera llegar a pasar.\n\n
+
+Espero que podamos tener un día maravilloso, que a pesar del momento que estamos pasando, podamos recuperar la chispa de amor que hay en nuestros corazones, y sea un día de compartir y volver a estar juntos después de la larga espera que al menos para mi persona, ha sido casi eterna.\n\n
+
+Me gana la emoción por al fin poder tenerte en mis brazos, pegadita a mi y sentir a mi bella señorita, todo lo que quiero y lo mejor del mundo, porque eres lo más bello y la mejor novia del mundo mundial.\n\n
+
+Espero que estés durmiendo plácidamente, y si cuando termines de leer esto, al menos se dibujó esa hermosa sonrisa que me encanta en tu preciosa carita, por favor espero un abrazo lleno de afecto, y un gran beso en compensación por la larga espera, que este hombre enamorado de su bella mujer, ha tenido que pasar.\n\n
+
+Te amo con toda el alma.`;
+    } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
   }
   const container = document.getElementById('dedication-text');
@@ -79,6 +90,8 @@ function showDedicationText() { //seguidores
   function type() {
     if (i <= text.length) {
       container.textContent = text.slice(0, i);
+        container.scrollTop = container.scrollHeight; // 👈 esto mantiene el scroll abajo
+
       i++;
       setTimeout(type, text[i - 2] === '\n' ? 350 : 45);
     } else {
@@ -101,7 +114,7 @@ function showSignature() {
     dedication.appendChild(signature);
   }
   let firma = getURLParam('firma');
-  signature.textContent = firma ? decodeURIComponent(firma) : "Con amor, Zero";
+  signature.textContent = firma ? decodeURIComponent(firma) : "Con el más sincero amor, la persona que más te ama en este mundo.";
   signature.classList.add('visible');
 }
 

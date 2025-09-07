@@ -75,16 +75,17 @@ body {
   transform: translateY(-50%);
   min-width: 320px;
   max-width: 600px;
+  max-height: 60vh;   /* ocupa hasta el 60% de la altura de la ventana */
   width: 60rem;
   font-size: 1.5rem;
   color: #050505;
   font-family: 'Courier New', Courier, monospace;
-  white-space: pre-line;
+  white-space: pre-wrap; /* respeta saltos de línea */
   z-index: 3;
   opacity: 0;
-  pointer-events: none;
-  max-height: 90vh;
-  overflow: visible;
+  pointer-events: auto;
+  overflow-y: auto;   /* scroll vertical si se pasa de altura */
+  overflow-x: hidden; /* evita barra horizontal */
   padding: 1em 1.5em 1em 1em;
   background: rgba(255,255,255,0.92);
   border-radius: 0.7em;
@@ -92,6 +93,7 @@ body {
   /* Permite que la caja crezca en altura y ancho */
   transition: max-width 0.4s, min-width 0.4s, width 0.4s;
 }
+
 
 .dedication-text.typing {
   opacity: 1;
