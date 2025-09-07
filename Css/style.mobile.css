@@ -43,15 +43,18 @@ body {
   white-space: pre-line;
   z-index: 3;
   opacity: 0;
-pointer-events: auto;    /* ✅ permite scroll */
-  overflow-y: auto;        /* ✅ scroll vertical */
-  max-height: 65vh;        /* ✅ límite en altura */
-.dedication-text {
+
+  /* Caja y límites */
   background: rgba(255,255,255,0.92);
   border-radius: 0.7em;
   padding: 0.7em;
+
+  /* Control en móvil */
+  pointer-events: auto;
+  overflow-y: auto;
+  max-height: 65vh;
 }
-}
+
 
 .signature {
   position: static;
