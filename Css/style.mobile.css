@@ -52,7 +52,7 @@ body {
   /* Control en móvil */
   pointer-events: auto;
   overflow-y: auto;
-  max-height: 65vh;
+  max-height: 40vh;
 }
 
 

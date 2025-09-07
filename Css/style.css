@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -129,17 +131,18 @@ body {
   top: auto;
   left: auto;
   bottom: auto;
-  margin-top: 1.5em;
-  margin-left: 0;
+  margin: 1.5em auto 0 auto;
   display: block;
-  font-family: 'Dancing Script', 'Pacifico', cursive, sans-serif;
   font-size: 2.2rem;
   color: #e60026;
   opacity: 0;
   z-index: 5;
-  white-space: pre;
+  white-space: normal;   /* ✅ permite saltos de línea automáticos */
   pointer-events: none;
   transition: opacity 0.7s;
+    word-wrap: break-word; /* ✅ fuerza corte si una palabra es muy larga */
+      font-family: 'Dancing Script', 'Pacifico', cursive, sans-serif;
+
 }
 
 .signature.visible {
